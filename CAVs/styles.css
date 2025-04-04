@@ -129,7 +129,7 @@ form button:hover {
   }
 
   nav ul {
-    flex-direction: raw; /* Stack navigation items vertically */
+    flex-direction: ; /* Stack navigation items vertically */
     margin: 0; /* Remove margin for compact spacing */
   }
 
