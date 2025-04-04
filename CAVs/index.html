@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAV Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" />
+</head>
+<body>
+  
+  <main>
+    <section id="home">
+      <header>
+        <marquee behavior="scroll" width="300" direction="left" duration="2seconds">
+    <h1>Connected Vehicle Dashboard</h1></marquee>
+    <nav>
+      <a style="animation: blink 5s linear infinite;" href="explain.html">learn how to use Dashbord</a>
+
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#data">Data</a></li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#alerts">Alerts</a></li>
+        <li><a href="#studies">Studies</a></li>
+        <li><a href="#policies">Policies</a></li>
+        <li><a href="#books">Books</a></li>
+        <li><a href="#sensors">Sensors</a></li>
+        <li><a href="#traffic">Traffic</a></li>
+        <li><a href="#weather">Weather</a></li>
+      </ul>
+    </nav>
+  </header>
+      <h2><marquee behavior="alternate">Welcome to the CAV Dashboard</marquee></h2>
+      <p>Monitor your vehicle's real-time data and stay updated.</p>
+    </section>
+    <section id="data">
+      <h2>Real-Time Data. <a style="animation: blink 3s linear infinite;" href="explain.html">learn about</a></h2>
+      <div id="data-display"></div>
+      <canvas id="data-chart"></canvas>
+      <h3>Enter Vehicle Data. <a href="">learn about</a></h3>
+      <form id="vehicle-data-form">
+        <label for="speed">Speed (km/h):</label>
+        <input type="number" id="speed" name="speed" required><br>
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required><br>
+        <label for="status">Status:</label>
+        <input type="text" id="status" name="status" required><br>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    <section id="map">
+      <h2>Vehicle Location </h2>
+      <div id="map-container"></div>
+    </section>
+    <section id="alerts">
+      <h2>Alerts</h2>
+      <div id="alert-display"></div>
+    </section>
+    <section id="studies">
+      <h2>Regional Studies on CAVs</h2>
+      <p>Study on the impact of CAVs in urban areas: This study focuses on the influence of Connected and Automated Vehicles in urban settings, evaluating factors such as traffic flow, emissions, and public transport integration. <a href="#" id="read-more-studies">Read more</a></p>
+    </section>
+    <section id="policies">
+      <h2>Policy Impacts on CAVs</h2>
+      <p>Analysis of policy impacts on CAV deployment: This analysis addresses various policies influencing the deployment and adoption of CAVs, including regulations, incentives, and barriers. <a href="#" id="read-more-policies">Read more</a></p>
+    </section>
+    <section id="books">
+      <h2>Books on CAVs</h2>
+      <p>Comprehensive guide on Connected and Automated Vehicles: This publication serves as an extensive resource on CAVs, encompassing technological advancements, regulatory frameworks, and future trends. <a href="#" id="read-more-books">Read more</a></p>
+    </section>
+    <section id="sensors">
+      <h2>Sensor Data</h2>
+      <div id="sensor-data">
+        <p>Camera: Active</p>
+        <p>Lidar: Active</p>
+        <p>Radar: Active</p>
+      </div>
+      <h3>Enter Sensor Data. <a style="animation: blink 3s linear infinite;" href="explain.html">learn about</a></h3>
+      <form id="sensor-data-form">
+        <label for="camera">Camera:</label>
+        <select id="camera" name="camera">
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select><br>
+        <label for="lidar">Lidar:</label>
+        <select id="lidar" name="lidar">
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select><br>
+        <label for="radar">Radar:</label>
+        <select id="radar" name="radar">
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select><br>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    <section id="traffic">
+      <h2>Traffic Information. <a style="animation: blink 3s linear infinite;" href="explain.html">learn about</a></h2>
+      <div id="traffic-info"></div>
+      <h3>Enter Traffic Information</h3>
+      <form id="traffic-info-form">
+        <label for="traffic-status">Traffic Status:</label>
+        <input type="text" id="traffic-status" name="traffic-status" required><br>
+        <label for="congestion">Congestion Level:</label>
+        <input type="text" id="congestion" name="congestion" required><br>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    <section id="weather">
+      <h2 >Weather Updates. <a style="animation: blink 3s linear infinite;" href="explain.html">learn about</a></h2>
+      <div id="weather-updates"></div>
+      <h3>Enter Weather Updates</h3>
+      <form id="weather-updates-form">
+        <label for="temperature">Temperature (°C):</label>
+        <input type="number" id="temperature" name="temperature" required><br>
+        <label for="condition">Condition:</label>
+        <input type="text" id="condition" name="condition" required><br>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    <footer>
+
+    <p>&copy; 2025 CAVs DASHBOARD. All Rights Reserved.</p>
+  </footer>
+  </main><!--
+  <footer>
+    <h3>Your safety is assured here.<br>Your trust drives our mission to make transportation smarter, safer, and more efficient for everyone. 
+
+    </h3>
+  </footer>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

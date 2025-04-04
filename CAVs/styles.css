@@ -1,0 +1,159 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+a{color: lightblue;}
+
+header {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  text-align: center;
+  width: 95%;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 0;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1rem;
+}
+
+aside {
+  width: 25%;
+  padding: 1rem;
+  background-color: #1e1e1e;
+}
+
+aside h3 {
+  margin-top: 0;
+}
+
+section {
+  flex: 1;
+  margin-left: 1rem;
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+#map-container {
+  height: 400px;
+}
+
+footer {
+  background-color: #1e1e1e;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+canvas {
+  background-color: #ffffff;
+}
+
+form {
+  margin-bottom: 1rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+form input,
+form select {
+  width: 60%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 4px;
+}
+
+form button {
+  width: 20%;
+  padding: 0.5rem;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: gold;
+}
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+/* Mobile Optimization: Adjust layout for smaller screens */
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column; /* Change layout to column for small screens */
+  }
+
+  header {
+    width: 100%; /* Full width header */
+    font-size: 1.5rem; /* Smaller font size for smaller screens */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack navigation items vertically */
+    margin: 0; /* Remove margin for compact spacing */
+  }
+
+  nav ul li {
+    margin-bottom: 0.5rem; /* Add spacing between vertical nav items */
+  }
+
+  aside {
+    width: 100%; /* Full width for the sidebar */
+  }
+
+  section {
+    margin-left: 0; /* Remove margin for sections */
+    padding: 1rem 0; /* Adjust padding for better spacing */
+  }
+
+  form input,
+  form select,
+  form button {
+    width: 90%; /* Use full width for form elements */
+    margin: 0.5rem 0; /* Add spacing between form elements */
+  }
+
+  footer {
+    font-size: 0.9rem; /* Slightly smaller font for the footer */
+  }
+}
