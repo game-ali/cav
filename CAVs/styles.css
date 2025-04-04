@@ -120,7 +120,7 @@ form button:hover {
 /* Mobile Optimization: Adjust layout for smaller screens */
 @media screen and (max-width: 768px) {
   body {
-    flex-direction: column; /* Change layout to column for small screens */
+    flex-direction: ; /* Change layout to column for small screens */
   }
 
   header {
